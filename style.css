@@ -1,0 +1,281 @@
+:root{
+    --verde-oscuro:#37422f;
+    --gris-azulado:#6e7c89;
+    --gris:#8e8e8e;
+    --azul-marino:#141c3d;
+    --rojo-vino:#7a0000;
+    --beige:#c5b89a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #240000, #001733);
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.calendario{
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-auto-rows: 120px;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.casilla{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: transform 0.25s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%
+}
+
+.casilla:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.pagina-detalle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenido{
+    background: rgba(114, 116, 89, 0.466);
+    width: 90%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.boton-volver{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #232b3b;
+    color: #ffffff5b;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.boton-volver:hover{
+    background: #191336;
+}
+
+.grande-horizontal{
+    grid-column: span 2;
+}
+
+.grande-vertical{
+    grid-row: span 2;
+}
+
+.grande-cuadro{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.verde{
+  background:var(--verde-oscuro);
+}
+
+.gris-azulado{
+  background:var(--gris-azulado);
+}
+
+.gris{
+  background:var(--gris);
+}
+
+.azul{
+  background:var(--azul-marino);
+}
+
+.rojo{
+  background:var(--rojo-vino);
+}
+
+.beige{
+  background:var(--beige);
+  color:#333;
+}
+
+.img-cofre{
+    background-image:url("imagenes/dia25_cofre.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 90%;
+}
+
+.img-barca{
+    background-image:url("imagenes/barca_camisa.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 45%;
+}
+
+.img-bennet{
+    background-image:url("imagenes/bennet.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 70%;
+}
+
+.img-ganyu{
+    background-image:url("imagenes/ganyu.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 40%;
+}
+
+.img-monoplazaF{
+    background-image:url("imagenes/monoplaza_ferrari.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 90%;
+}
+
+.img-royale{
+    background-image:url("imagenes/ClashR.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 90%;
+}
+
+.img-brawl{
+    background-image:url("imagenes/brawl.png");
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 90%;
+}
+
+#intro-video{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    opacity: 1;
+    transition: opacity 1.2s ease, 
+                transform 1.2s ease,
+                filter 1.2s ease;
+}
+
+#videoCumple{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+.oculto{
+    display:none;
+}
+
+.fade-out{
+    opacity:0;
+    transform:scale(1.05);
+    filter:blur(8px);
+}
+
+h1{
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+}
+
+h2{
+    font-family: "Cormorant Garamond", serif;
+    color: #ffffff; 
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+.boton-pdf{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 22px;
+    background:#141c3d;
+    color:white;
+    text-decoration:none;
+    border-radius:14px;
+    font-family:"Poppins", sans-serif;
+}
+
+.tarjeta-panini{
+    width:100%;
+    max-width:280px;
+    border-radius:5px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition:transform 0.3s ease;
+}
+
+.tarjeta-panini:hover{
+    transform:scale(1.03);
+}
+
+.firma-final{
+    margin-top:20px;
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif, cursive;
+    font-size:23px;
+    color:#ffffff;
+}
+
+.video-recuerdo{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+.boton-carta{
+    display:inline-block;
+    margin-top:20px;
+    padding:16px 24px;
+    background:#7a0000;
+    color:white;
+    text-decoration:none;
+    border-radius:16px;
+    font-family:"Poppins", sans-serif;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.boton-carta:hover{
+    transform:scale(1.05);
+}
