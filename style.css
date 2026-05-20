@@ -279,3 +279,8 @@ p{
 .boton-carta:hover{
     transform:scale(1.05);
 }
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
